@@ -1,11 +1,18 @@
 'use strict'
 
 /*
- * Create a `sentence` function that takes an array of strings
- * and return a string of all the element separated by a space
+ * Create a function `sentence` that takes an array of strings
+ * and return a strings of all the element separated by spaces
  *
  */
-
+const sentence=(array)=>{
+  let resultat=array[0]
+  
+  for(let i=1;i<array.length;i++){
+  resultat=resultat + '\ ' + array[i]
+  }
+  return resultat
+}
 
 //* Begin of tests
 const assert = require('assert')

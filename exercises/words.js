@@ -1,12 +1,28 @@
 'use strict'
 
 /*
- * Create a `words` function that takes a string
+ * Create a function `words` that take a string
  * and return an array of each words using space as a delimiter
  *
  */
 
+const words=(str)=>{
+  const array=[]
 
+  array[0]=str[0]
+   let j=0
+  for(let i=1;i<str.length;i++){
+    if (str[i]!=='\ '){
+      array[j]=array[j]+str[i]
+
+    }else{
+      j++
+      array[j]=''
+    }
+
+
+  }return array
+}
 //* Begin of tests
 const assert = require('assert')
 

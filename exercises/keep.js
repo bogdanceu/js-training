@@ -1,20 +1,41 @@
 'use strict'
 
 /*
- * Create a `keepFirst` function that takes a string as parameter
- * and return the string only keeping the 2 first characters
+ * Create a function `keepFirst` takes a string
+ * and only keep the 2 first characters
  *
- * Create a `keepLast` function that takes a string as parameter
- * and return the string only keeping the 2 last characters
+ * Create a function `keepLast` takes a string
+ * and only keep the 2 last characters
  *
- * Create a `keepFirstLast` function that takes a string as parameter
+ * Create a function `keepFirstLast` takes a string
  * and only keep 2 characters from the third character
  *
  */
+ const keepFirst=(str)=>{
+
+   return str.slice(0,2)
+ }
 
 
-//* Begin of tests
-const assert = require('assert')
+ const keepLast=(str)=>{
 
-assert.fail('You must write your own tests')
+   return str.slice(str.length-2,str.length)
+ }
+
+
+ const keepFirstLast=(str)=>{
+   return str.slice(0,2) + str.slice(str.length-2,str.length)
+ }
+
+ //* Begin of tests
+ const assert = require('assert')
+
+ assert.strictEqual(typeof keepFirst, 'function')
+ assert.strictEqual(keepFirst('wildcod'),'wi')
+ assert.strictEqual(typeof keepLast, 'function')
+ assert.strictEqual(keepLast('wildcod'),'od')
+ assert.strictEqual(typeof keepFirstLast, 'function')
+ assert.strictEqual(keepFirstLast('wildcod'),'wiod')
+
+
 // End of tests */

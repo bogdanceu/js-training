@@ -1,14 +1,26 @@
 'use strict'
 
 /*
- * Create a `yell` function that takes a string
- * and return the same string in upper case
+ * Create a function `yell` that takes a string
+ * and return the same string but all in upper case
  *
  */
+ const yell=(str)=>{
+   return str.toUpperCase()
+ }
+
+ //* Begin of tests
+ const assert = require('assert')
 
 
-//* Begin of tests
-const assert = require('assert')
 
-assert.fail('You must write your own tests')
+ assert.strictEqual(typeof yell, 'function')
+ assert.deepStrictEqual(yell('abc'), 'ABC')
+ assert.deepStrictEqual(yell('Abc'), 'ABC')
+ assert.deepStrictEqual(yell('ABc'), 'ABC')
+ assert.deepStrictEqual(yell('ABC'), 'ABC')
+
+
+
+
 // End of tests */

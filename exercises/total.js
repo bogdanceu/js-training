@@ -1,11 +1,17 @@
 'use strict'
 
 /*
- * Create a `total` function that takes an array of numbers
- * and return the total
+ * Create a function `total` that takes an array on numbers
+ * and return it's total
  *
  */
-
+const total=(array)=>{
+  let total=0
+  for(let element of array){
+    total=total+element
+  }
+  return total
+}
 
 //* Begin of tests
 const assert = require('assert')
